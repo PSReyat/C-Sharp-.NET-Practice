@@ -6,19 +6,19 @@ double PythagarosThereom(int a, int b)
     return Math.Sqrt(c);
 }
 
-for(int i = 1; i < 1001; i++)
+for(int i = 1; i < 101; i++)
 {
-    for(int j = 1; j < 1001; j++)
+    for(int j = 1; j < 101; j++)
     {
         double result = PythagarosThereom(i, j);
         if(result % 1 == 0)
         {
-            string combos = "a = " + i + ", b = " + j + ", c = " + result;
-            
             int intResult = (int)(i * j * result);
 
             if (!entries.ContainsKey(intResult))
             {
+                string combos = "a = " + i + ", b = " + j + ", c = " + result;
+
                 entries.Add(intResult, combos);
             }
         }
